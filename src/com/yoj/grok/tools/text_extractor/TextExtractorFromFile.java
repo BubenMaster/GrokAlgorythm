@@ -1,12 +1,14 @@
-package com.yoj.grok.tools;
+package com.yoj.grok.tools.text_extractor;
+
+import com.yoj.grok.tools.StringLineClearer;
 
 import java.io.*;
-import java.util.HashSet;
 import java.util.Set;
 
-public class TextExtractorFromFile {
+public class TextExtractorFromFile implements ExtractorFromFile {
 
-    String fileDir;
+    private long methodExecutionTime = 0;
+    private final String fileDir;
     private static  final String  SPACE = String.valueOf('\u0020');
 
 
@@ -14,7 +16,18 @@ public class TextExtractorFromFile {
         this.fileDir = fileDir;
     }
 
-    public StringBuilder extractAsBuilder() throws IOException {
+    @Override
+    public long getMethodExecutionTime() {
+        return this.methodExecutionTime;
+    }
+
+    @Override
+    public void setMethodExecutionTime(long timeRecord) {
+        this.methodExecutionTime = timeRecord;
+    }
+
+    @Override
+    public StringBuilder extractClearedRawTextAsBuilder() throws IOException {
         File file = new File(fileDir);
         BufferedReader reader;
 
@@ -33,19 +46,21 @@ public class TextExtractorFromFile {
         return builder;
     }
 
+    @Override
     public Set<String> extractAsSet(Set<String> setWithDesiredType) throws IOException {
         setWithDesiredType.clear();
         
-        String[] words = extractAsBuilder().toString().split(SPACE);         
+        String[] words = extractClearedRawTextAsBuilder().toString().split(SPACE);
         for (int i = 0; i < words.length; i++) {
             if (!words[i].isEmpty()) setWithDesiredType.add(words[i].toLowerCase());
         }
         return  setWithDesiredType;
     }
 
+    @Override
     public String[] extractAsArrayOfUniques(Set<String> setWithDesiredType) throws IOException {
         setWithDesiredType.clear();
-        String[] words = extractAsBuilder().toString().split(SPACE);
+        String[] words = extractClearedRawTextAsBuilder().toString().split(SPACE);
         int length = 0;
         for (int i = 0; i < words.length; i++) {
             if (!words[i].isEmpty()) setWithDesiredType.add(words[i].toLowerCase());

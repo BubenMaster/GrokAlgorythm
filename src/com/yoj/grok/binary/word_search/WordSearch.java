@@ -1,6 +1,8 @@
 package com.yoj.grok.binary.word_search;
 
-import com.yoj.grok.tools.TextExtractorFromFile;
+import com.yoj.grok.tools.text_extractor.ExtractorFromFile;
+import com.yoj.grok.tools.text_extractor.Proxy.TextExtractorFromFileProxy;
+
 
 import java.io.*;
 import java.util.*;
@@ -8,26 +10,48 @@ import java.util.*;
 public class WordSearch {
     public static void main(String[] args) throws IOException {
 
-        TextExtractorFromFile extractor = new TextExtractorFromFile("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
-        StringBuilder builder = extractor.extractAsBuilder();
+        long methodTimer = 0;
 
-        Date dateStart = new Date();
+        ExtractorFromFile extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
+        StringBuilder builder = extractor.extractClearedRawTextAsBuilder();
+
+
         Set<String> uniqueWords = extractor.extractAsSet(new HashSet<>());
-        long dateDifference = new Date().getTime() - dateStart.getTime();
-        System.out.println(dateDifference);
 
-//        System.out.println(uniqueWords);
-        System.out.println(uniqueWords.size());
         System.out.println("****************************************");
 
-        String[] wordsUnique = extractor.extractAsArrayOfUniques(new HashSet<>());
-        System.out.println(Arrays.toString(wordsUnique));
-        System.out.println(wordsUnique.length);
+        String[] words = extractor.extractAsArrayOfUniques(new TreeSet<>());
+        System.out.println(words.length);
 
 
+        String wordToFind = "wind";
 
 
-//        System.out.println(uniqueWords);
+        String min = words[0];
+        int maxIndex = words.length - 1;
+        int middleIndex = maxIndex/2;
+        int minIndex = 0;
+        int step = 0;
+
+        while (minIndex < maxIndex){
+            System.out.println("step" + ++step );
+            if (wordToFind.equalsIgnoreCase(words[middleIndex])) {
+                System.out.println("indexof word " + wordToFind + " is: " + middleIndex);
+                break;
+            }
+
+            if (wordToFind.compareTo(words[middleIndex]) < 0){
+                maxIndex = middleIndex;
+            }
+            else minIndex = middleIndex + 1;
+
+            middleIndex = (maxIndex + minIndex)/2;
+            System.out.println(middleIndex);
+            System.out.println("Min: " + minIndex + " Max:  " + maxIndex);
+        }
+
+        System.out.println(words[middleIndex-1] + " " + words[middleIndex] + " " + words[middleIndex + 1]);
+
 
 
     }
