@@ -20,7 +20,7 @@ public class BinaryWordSearchTest {
 
     private static String[] words;
     private static int lastElem;
-    private static Random random = new Random();
+    private static final Random random = new Random();
 
     @BeforeAll
     public static void arrange() throws IOException {
@@ -33,26 +33,35 @@ public class BinaryWordSearchTest {
 
     @Test
     public void testZeroLast(){
-        assertEquals(0, BinaryWordSearch.in(words).find(words[0])
-                , "expected: " + 0 + ", but returned: " + BinaryWordSearch.in(words).find(words[0]));
-        assertEquals(lastElem, BinaryWordSearch.in(words).find(words[lastElem])
-                , "expected: " + (lastElem) + ", but returned: " + BinaryWordSearch.in(words).find(words[lastElem]));
+        assertEquals(0, BinaryWordSearch.in(words).find(words[0]));
+        assertEquals(lastElem, BinaryWordSearch.in(words).find(words[lastElem]));
     }
 
     @Test
     public void testTenRandomElements(){
         for (int i = 0; i < 10; i++){
             int randomIndex = random.nextInt(lastElem);
-            assertEquals(randomIndex, BinaryWordSearch.in(words).find(words[randomIndex])
-                    , "expected: " + randomIndex + ", but returned: " + BinaryWordSearch.in(words).find(words[randomIndex]));
+            assertEquals(randomIndex, BinaryWordSearch.in(words).find(words[randomIndex]));
         }
     }
 
     @Test
-    public void textNull(){
+    public void testNull(){
         assertThrows(IllegalArgumentException.class, () -> BinaryWordSearch.in(words).find(null));
         assertThrows(IllegalArgumentException.class, () -> BinaryWordSearch.in(null).find(null));
         assertThrows(IllegalArgumentException.class, () -> BinaryWordSearch.in(null));
     }
+
+    @Test
+    public void testEmpty(){
+        assertEquals(-1, BinaryWordSearch.in(words).find(""));
+    }
+
+    @Test
+    public void testMissing(){
+        assertEquals(-1, BinaryWordSearch.in(words).find("iHopeThisIsNotInTheList"));
+        assertEquals(-1, BinaryWordSearch.in(words).find("ThisIsDefinitelyNotInTheList"));
+    }
+
 
 }

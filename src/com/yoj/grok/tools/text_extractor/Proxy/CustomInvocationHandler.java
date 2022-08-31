@@ -18,7 +18,6 @@ public class CustomInvocationHandler implements InvocationHandler {
         Date start = new Date();
         Object methodResult = method.invoke(obj,args);
         if (!method.getName().equals("getMethodExecutionTime")) {
-            System.out.println(method.getName());
             obj.setMethodExecutionTime(new Date().getTime() - start.getTime());
         }
         return methodResult;

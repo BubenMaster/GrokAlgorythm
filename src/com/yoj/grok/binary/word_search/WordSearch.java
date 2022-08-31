@@ -1,6 +1,7 @@
 package com.yoj.grok.binary.word_search;
 
 import com.yoj.grok.tools.searchers.BinaryWordSearch;
+import com.yoj.grok.tools.sorters.select_sort.SelectSorter;
 import com.yoj.grok.tools.text_extractor.ExtractorFromFile;
 import com.yoj.grok.tools.text_extractor.Proxy.TextExtractorFromFileProxy;
 import com.yoj.grok.tools.text_extractor.string_clearer.StringLineClearer;
@@ -22,15 +23,26 @@ public class WordSearch {
 
 
         Set<String> uniqueWords = extractor.extractAsSet(new HashSet<>());
-        System.out.println(uniqueWords);
-        System.out.println(uniqueWords.size());
+//        System.out.println(uniqueWords);
+//        System.out.println(uniqueWords.size());
+
+
+
+        String[] wordsOrdered = extractor.extractAsArrayOfUniques(new TreeSet<>());
+        String[] wordsUnordered = extractor.extractAsArrayOfUniques(new HashSet<>());
+//        System.out.println(words.length);
+
+
+
+
 
         System.out.println("****************************************");
 
-        String[] words = extractor.extractAsArrayOfUniques(new TreeSet<>());
-        System.out.println(words.length);
+        String[] wordsSorted = SelectSorter.sort(wordsUnordered);
+        System.out.println(Arrays.toString(wordsSorted));
 
-        System.out.println("founded index: " + BinaryWordSearch.in(words).find("honey"));
+        System.out.println(Arrays.equals(wordsOrdered, wordsSorted));
+
     }
 
 }

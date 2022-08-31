@@ -2,6 +2,8 @@ package com.yoj.grok.tools.searchers;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.math.MathContext;
+
 public class BinaryWordSearch {
 
     String[] words;
@@ -24,8 +26,8 @@ public class BinaryWordSearch {
         String wordToFind = word.toLowerCase();
 
         int maxIndex = words.length - 1;
-        int middleIndex = maxIndex/2;
         int minIndex = 0;
+        int middleIndex = (maxIndex + minIndex) / 2;
 
         while (minIndex < maxIndex){
             if (wordToFind.equals(words[middleIndex])) {
@@ -35,9 +37,8 @@ public class BinaryWordSearch {
                 maxIndex = middleIndex - 1;
             }
             else minIndex = middleIndex + 1;
-            middleIndex = (maxIndex + minIndex)/2;
+            middleIndex = (maxIndex + minIndex) / 2;
         }
-
         return wordToFind.equals(words[middleIndex]) ? middleIndex : -1;
     }
 }
