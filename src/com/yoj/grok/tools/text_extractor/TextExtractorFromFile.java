@@ -1,6 +1,6 @@
 package com.yoj.grok.tools.text_extractor;
 
-import com.yoj.grok.tools.StringLineClearer;
+import com.yoj.grok.tools.text_extractor.string_clearer.StringLineClearer;
 
 import java.io.*;
 import java.util.Set;
@@ -40,7 +40,7 @@ public class TextExtractorFromFile implements ExtractorFromFile {
         StringBuilder builder = new StringBuilder();
         String line;
         while ( (line = reader.readLine()) != null) {
-            builder.append(StringLineClearer.clearAllExceptLettersAndSingleWhiteSpacesIn(!line.isEmpty() ? line + SPACE : ""));
+            builder.append(StringLineClearer.clearNotWords(!line.isEmpty() ? line + SPACE : ""));
         }
 
         return builder;

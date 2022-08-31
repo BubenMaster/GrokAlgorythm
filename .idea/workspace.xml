@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Initial commit (Subject arrays can be created)">
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/ExtractorFromFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/Proxy/CustomInvocationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/Proxy/TextExtractorFromFileProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/BinaryWordSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinaryWordSearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrokAlgorythm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GrokAlgorythm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/binary/word_search/WordSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/binary/word_search/WordSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/TextExtractorFromFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/StringLineClearer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/binary/word_search/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/binary/word_search/WordSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/TextExtractorFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/StringLineClearer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/string_clearer/StringLineClearer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +40,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -49,7 +58,7 @@
       <recent name="com.yoj.grok" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.com.yoj.grok.binary.word_search.WordSearch">
     <configuration name="com.yoj.grok.binary.word_search.WordSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yoj.grok.binary.word_search.WordSearch" />
       <module name="GrokAlgorythm" />
@@ -63,9 +72,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BinaryWordSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrokAlgorythm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yoj.grok.tools.searchers.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yoj.grok.tools.searchers.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.searchers.test.BinaryWordSearchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryWordSearchTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrokAlgorythm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yoj.grok.tools.searchers.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yoj.grok.tools.searchers.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.searchers.test.BinaryWordSearchTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryWordSearchTest.testZeroLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrokAlgorythm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yoj.grok.tools.searchers.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yoj.grok.tools.searchers.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.searchers.test.BinaryWordSearchTest" />
+      <option name="METHOD_NAME" value="testZeroLast" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryWordSearchTest.textNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrokAlgorythm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yoj.grok.tools.searchers.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yoj.grok.tools.searchers.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.searchers.test.BinaryWordSearchTest" />
+      <option name="METHOD_NAME" value="textNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.yoj.grok.binary.word_search.WordSearch" />
+        <item itemvalue="JUnit.BinaryWordSearchTest" />
+        <item itemvalue="JUnit.BinaryWordSearchTest.textNull" />
+        <item itemvalue="JUnit.BinaryWordSearchTest.testZeroLast" />
+        <item itemvalue="JUnit.BinaryWordSearchTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -78,6 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1661846145752</updated>
       <workItem from="1661846148094" duration="26830000" />
+      <workItem from="1661949973137" duration="12199000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (Subject arrays can be created)">
       <created>1661856452910</created>
