@@ -16,7 +16,7 @@ import java.util.TreeSet;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Nested
-public class BinaryWordSearchTest {
+public class BinarySandboxTest {
 
     private static String[] words;
     private static int lastElem;

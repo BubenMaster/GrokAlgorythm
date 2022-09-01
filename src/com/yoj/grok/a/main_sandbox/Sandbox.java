@@ -1,7 +1,9 @@
-package com.yoj.grok.binary.word_search;
+package com.yoj.grok.a.main_sandbox;
 
-import com.yoj.grok.tools.sorters.select_sort.SorterByBubble;
-import com.yoj.grok.tools.sorters.select_sort.SorterBySelection;
+import com.yoj.grok.tools.sorter.Sort;
+import com.yoj.grok.tools.sorter.sort_methods.Bubble;
+import com.yoj.grok.tools.sorter.sort_methods.Insertion;
+import com.yoj.grok.tools.sorter.sort_methods.Selection;
 import com.yoj.grok.tools.text_extractor.ExtractorFromFile;
 import com.yoj.grok.tools.text_extractor.Proxy.TextExtractorFromFileProxy;
 
@@ -10,7 +12,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class WordSearch {
+public class Sandbox {
     public static void main(String[] args) throws IOException {
 
         long methodTimer = 0;
@@ -35,8 +37,10 @@ public class WordSearch {
 
         System.out.println("****************************************");
 
-        String[] wordsSorted = SorterByBubble.sort(wordsUnordered);
-        System.out.println(Arrays.toString(wordsSorted));
+        String[] wordsSorted = Sort.of(wordsOrdered).byMethod(new Selection());
+
+//        System.out.println(Arrays.toString(wordsSorted));
+
 
         System.out.println(Arrays.equals(wordsOrdered, wordsSorted));
 
