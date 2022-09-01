@@ -1,6 +1,6 @@
 package com.yoj.grok.tools.sorters.select_sort.test;
 
-import com.yoj.grok.tools.sorters.select_sort.SelectSorter;
+import com.yoj.grok.tools.sorters.select_sort.SorterBySelection;
 import com.yoj.grok.tools.text_extractor.ExtractorFromFile;
 import com.yoj.grok.tools.text_extractor.Proxy.TextExtractorFromFileProxy;
 import org.junit.jupiter.api.BeforeAll;
@@ -15,7 +15,7 @@ import java.util.TreeSet;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Nested
-public class SelectSorterTest {
+public class SorterBySelectionTest {
 
     private static String[] orderedWords;
     private static String[] unorderedWords;
@@ -31,7 +31,7 @@ public class SelectSorterTest {
 
     @BeforeEach
     public void act(){
-        sortedWords = SelectSorter.sort(unorderedWords);
+        sortedWords = SorterBySelection.sort(unorderedWords);
     }
 
 

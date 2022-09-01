@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Add some Tests for BinaryWordSearch">
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/SelectSorter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/test/SelectSorterTest.java" afterDir="false" />
+    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Add sort by selections and test">
+      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/SorterByBubble.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/binary/word_search/WordSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/binary/word_search/WordSearch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/Proxy/CustomInvocationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/Proxy/CustomInvocationHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/binary/word_search/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/binary/word_search/WordSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/BinaryWordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/BinaryWordSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinaryWordSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinaryWordSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/Proxy/CustomInvocationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/Proxy/CustomInvocationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/SelectSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/SorterBySelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/test/SelectSorterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/test/SorterBySelectionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +52,7 @@
       <recent name="com.yoj.grok" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SelectSorterTest">
+  <component name="RunManager" selected="JUnit.SorterBySelectionTest">
     <configuration name="com.yoj.grok.binary.word_search.WordSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yoj.grok.binary.word_search.WordSearch" />
       <module name="GrokAlgorythm" />
@@ -117,16 +113,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectSorterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SorterBySelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GrokAlgorythm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yoj.grok.tools.sorters.select_sort.test.*" />
+          <option name="PATTERN" value="com.yoj.grok.tools.sorters.select_sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.yoj.grok.tools.sorters.select_sort.test" />
-      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.sorters.select_sort.test.SelectSorterTest" />
+      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.sorters.select_sort.test.SorterBySelectionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,7 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SelectSorterTest" />
+        <item itemvalue="JUnit.SorterBySelectionTest" />
         <item itemvalue="Application.com.yoj.grok.binary.word_search.WordSearch" />
         <item itemvalue="JUnit.BinaryWordSearchTest" />
         <item itemvalue="JUnit.BinaryWordSearchTest.testMissing" />
@@ -152,7 +148,8 @@
       <updated>1661846145752</updated>
       <workItem from="1661846148094" duration="26830000" />
       <workItem from="1661949973137" duration="12464000" />
-      <workItem from="1661969209174" duration="5372000" />
+      <workItem from="1661969209174" duration="5866000" />
+      <workItem from="1662028932190" duration="4680000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (Subject arrays can be created)">
       <created>1661856452910</created>
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661962445001</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add sort by selections and test">
+      <created>1661978612291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661978612291</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +192,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit (Subject arrays can be created)" />
     <MESSAGE value="Add some Tests for BinaryWordSearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some Tests for BinaryWordSearch" />
+    <MESSAGE value="Add sort by selections and test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add sort by selections and test" />
   </component>
 </project>

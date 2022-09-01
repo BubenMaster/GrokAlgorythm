@@ -1,16 +1,13 @@
 package com.yoj.grok.binary.word_search;
 
-import com.yoj.grok.tools.searchers.BinaryWordSearch;
-import com.yoj.grok.tools.sorters.select_sort.SelectSorter;
+import com.yoj.grok.tools.sorters.select_sort.SorterByBubble;
+import com.yoj.grok.tools.sorters.select_sort.SorterBySelection;
 import com.yoj.grok.tools.text_extractor.ExtractorFromFile;
 import com.yoj.grok.tools.text_extractor.Proxy.TextExtractorFromFileProxy;
-import com.yoj.grok.tools.text_extractor.string_clearer.StringLineClearer;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.conversions.RegexConversion;
 
 
 import java.io.*;
 import java.util.*;
-import java.util.regex.Pattern;
 
 
 public class WordSearch {
@@ -38,7 +35,7 @@ public class WordSearch {
 
         System.out.println("****************************************");
 
-        String[] wordsSorted = SelectSorter.sort(wordsUnordered);
+        String[] wordsSorted = SorterByBubble.bubbleMove(wordsUnordered);
         System.out.println(Arrays.toString(wordsSorted));
 
         System.out.println(Arrays.equals(wordsOrdered, wordsSorted));
