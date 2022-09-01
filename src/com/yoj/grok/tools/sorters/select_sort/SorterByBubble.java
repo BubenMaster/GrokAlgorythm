@@ -13,20 +13,28 @@ public class SorterByBubble {
 
     public static String[] sort(String[] unsortedWords){
         startTime = new Date().getTime();
-        String[] sortedWords = new String[unsortedWords.length];
+        String[] sortedWords = unsortedWords;
 
-
-
+        for (int i = 0; i < sortedWords.length; i++){
+            bubbleMove(sortedWords, sortedWords.length - i);
+        }
 
         printTotalOperations();
         printWorkingTime();
         return  sortedWords;
     }
 
-    public static String[] bubbleMove(String[] pool){
-        String[] alteredpool = pool;
+    private static void bubbleMove(String[] pool, int newLimit){
+        String buffer;
+        for (int i = 1; i < newLimit; i++){
+            if (pool[i-1].compareTo(pool[i]) > 0) {
+                operations++;
+                 buffer = pool[i-1];
+                 pool[i-1] = pool[i];
+                 pool[i] = buffer;
+            }
+        }
 
-        return alteredpool;
     }
 
     private static void printTotalOperations(){

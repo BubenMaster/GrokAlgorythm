@@ -13,13 +13,13 @@ public class SorterBySelection {
 
     public static String[] sort(String[] unsortedWords){
         startTime = new Date().getTime();
+
         String minWord = null;
         int minIndex = 0;
 
         String[] sortedWords = unsortedWords;
 
         for (int i = 0; i < sortedWords.length; i++){
-            operations++;
             minIndex = findMinFrom(sortedWords, i);
             minWord = sortedWords[minIndex];
             sortedWords[minIndex] = sortedWords[i];
@@ -36,7 +36,7 @@ public class SorterBySelection {
         String minWord = pool[minIndex];
         for (int i = startingIndex; i < pool.length; i++){
             operations++;
-            String currentWord = pool[i].toLowerCase();
+            String currentWord = pool[i];
             if(minWord.compareTo(currentWord) > 0) {
                 minWord = currentWord;
                 minIndex = i;

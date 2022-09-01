@@ -35,7 +35,7 @@ public class WordSearch {
 
         System.out.println("****************************************");
 
-        String[] wordsSorted = SorterByBubble.bubbleMove(wordsUnordered);
+        String[] wordsSorted = SorterByBubble.sort(wordsUnordered);
         System.out.println(Arrays.toString(wordsSorted));
 
         System.out.println(Arrays.equals(wordsOrdered, wordsSorted));
