@@ -1,4 +1,4 @@
-package com.yoj.grok.tools.searchers.test;
+package test.tools.searchers;
 
 
 
@@ -16,7 +16,7 @@ import java.util.TreeSet;
 import static org.junit.jupiter.api.Assertions.*;
 
 @Nested
-public class BinarySandboxTest {
+public class BinaryWordSearchTest {
 
     private static String[] words;
     private static int lastElem;
@@ -24,7 +24,7 @@ public class BinarySandboxTest {
 
     @BeforeAll
     public static void arrange() throws IOException {
-        ExtractorFromFile extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
+        ExtractorFromFile extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\texts\\ulysses.txt");
         words = extractor.extractArrayOfUniques(new TreeSet<>());
          lastElem = words.length - 1;
 

@@ -1,4 +1,4 @@
-package com.yoj.grok.tools.sorter.test;
+package test.tools.sorter;
 
 import com.yoj.grok.tools.sorter.Sort;
 import com.yoj.grok.tools.sorter.sort_methods.Bubble;
@@ -30,7 +30,7 @@ public class SortTest {
 
     @BeforeAll
     static void arrange() throws IOException {
-        extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
+        extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\texts\\ulysses.txt");
         orderedWords = extractor.extractArrayOfUniques(new TreeSet<>());
 
     }
