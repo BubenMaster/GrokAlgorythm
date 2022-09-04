@@ -2,6 +2,7 @@ package com.yoj.grok.tools.sorter.test;
 
 import com.yoj.grok.tools.sorter.Sort;
 import com.yoj.grok.tools.sorter.sort_methods.Bubble;
+import com.yoj.grok.tools.sorter.sort_methods.Heap;
 import com.yoj.grok.tools.sorter.sort_methods.Insertion;
 import com.yoj.grok.tools.sorter.sort_methods.Selection;
 import com.yoj.grok.tools.text_extractor.ExtractorFromFile;
@@ -52,6 +53,12 @@ public class SortTest {
     @Test
     public void testInsertion(){
         sortedWords = Sort.of(unorderedWords).byMethod(new Insertion());
+        assertArrayEquals(orderedWords,sortedWords);
+    }
+
+    @Test
+    public void testHeap(){
+        sortedWords = Sort.of(unorderedWords).byMethod(new Heap());
         assertArrayEquals(orderedWords,sortedWords);
     }
 

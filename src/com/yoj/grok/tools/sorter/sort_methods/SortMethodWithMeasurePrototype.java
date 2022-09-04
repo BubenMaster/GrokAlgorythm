@@ -13,6 +13,7 @@ public abstract class SortMethodWithMeasurePrototype implements SortMethod {
 
     public String[] sortWithMeasure(String[] unsortedWords){
         startTime = new Date().getTime();
+        operations = 0;
 
         String minWord = null;
         int minIndex = 0;

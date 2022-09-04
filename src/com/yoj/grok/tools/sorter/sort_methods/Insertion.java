@@ -5,9 +5,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Date;
 
 public class Insertion extends SortMethodWithMeasurePrototype{
-    private static int operations = 0;
-    private static long workingTime;
-    private static long startTime;
 
     @NotNull
     public String[] sort(String[] unsortedWords) {

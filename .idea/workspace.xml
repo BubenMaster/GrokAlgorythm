@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Add preparation for mutual realisation for sort methods.">
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/Sort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Insertion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/SortMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.java" afterDir="false" />
+    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Unite sortMethod under one Sort Class">
+      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Heap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/binary/word_search/WordSearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/searchers/test/BinaryWordSearchTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorters/select_sort/SorterByBubble.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorters/select_sort/SorterBySelection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorters/select_sort/test/SorterByBubbleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorters/select_sort/test/SorterBySelectionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/binary/word_search/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinaryWordSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinarySandboxTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/SorterByBubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/SorterBySelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/test/SorterByBubbleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorters/select_sort/test/SorterBySelectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/test/SortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/a/main_sandbox/Sandbox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/a/main_sandbox/Sandbox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Insertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Insertion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +56,7 @@
       <recent name="com.yoj.grok.tools.sorters.select_sort.test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SortTest">
+  <component name="RunManager" selected="JUnit.SortTest.testHeap">
     <configuration name="Sandbox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yoj.grok.a.main_sandbox.Sandbox" />
       <module name="GrokAlgorythm" />
@@ -92,6 +81,22 @@
       <option name="PACKAGE_NAME" value="com.yoj.grok.tools.sorter.test" />
       <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.sorter.test.SortTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortTest.testHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GrokAlgorythm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yoj.grok.tools.sorter.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yoj.grok.tools.sorter.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.sorter.test.SortTest" />
+      <option name="METHOD_NAME" value="testHeap" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,28 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SorterBySelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GrokAlgorythm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yoj.grok.tools.sorters.select_sort.test.sort_methods.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.yoj.grok.tools.sorters.select_sort.test" />
-      <option name="MAIN_CLASS_NAME" value="com.yoj.grok.tools.sorters.select_sort.test.SorterBySelectionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SortTest.testHeap" />
+        <item itemvalue="Application.Sandbox" />
         <item itemvalue="JUnit.SortTest" />
         <item itemvalue="JUnit.SortTest.testSort" />
-        <item itemvalue="Application.Sandbox" />
         <item itemvalue="JUnit.SorterByInsertionTest" />
-        <item itemvalue="JUnit.SorterBySelectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +153,9 @@
       <workItem from="1661846148094" duration="26830000" />
       <workItem from="1661949973137" duration="12464000" />
       <workItem from="1661969209174" duration="5866000" />
-      <workItem from="1662028932190" duration="15105000" />
+      <workItem from="1662028932190" duration="15151000" />
+      <workItem from="1662112661459" duration="123000" />
+      <workItem from="1662282990677" duration="8858000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (Subject arrays can be created)">
       <created>1661856452910</created>
@@ -200,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662036077358</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Unite sortMethod under one Sort Class">
+      <created>1662049064404</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662049064404</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +223,7 @@
     <MESSAGE value="Adjust sort by selections and test&#10;Add template for bubble sort" />
     <MESSAGE value="Add bubble method" />
     <MESSAGE value="Add preparation for mutual realisation for sort methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add preparation for mutual realisation for sort methods." />
+    <MESSAGE value="Unite sortMethod under one Sort Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unite sortMethod under one Sort Class" />
   </component>
 </project>
