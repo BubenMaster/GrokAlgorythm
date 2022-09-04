@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Unite sortMethod under one Sort Class">
-      <change afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Heap.java" afterDir="false" />
+    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Add heap Method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/a/main_sandbox/Sandbox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/a/main_sandbox/Sandbox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Bubble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Insertion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Insertion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Bubble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Insertion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Insertion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/test/SortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/test/SortTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +154,7 @@
       <workItem from="1661969209174" duration="5866000" />
       <workItem from="1662028932190" duration="15151000" />
       <workItem from="1662112661459" duration="123000" />
-      <workItem from="1662282990677" duration="8858000" />
+      <workItem from="1662282990677" duration="9749000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (Subject arrays can be created)">
       <created>1661856452910</created>
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662049064404</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add heap Method">
+      <created>1662293058401</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662293058401</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +230,7 @@
     <MESSAGE value="Add bubble method" />
     <MESSAGE value="Add preparation for mutual realisation for sort methods." />
     <MESSAGE value="Unite sortMethod under one Sort Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unite sortMethod under one Sort Class" />
+    <MESSAGE value="Add heap Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add heap Method" />
   </component>
 </project>
