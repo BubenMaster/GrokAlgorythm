@@ -5,14 +5,14 @@ import com.yoj.grok.tools.text_extractor.string_clearer.StringLineClearer;
 import java.io.*;
 import java.util.Set;
 
-public class TextExtractorFromFile implements ExtractorFromFile {
+public class WordsExtractorFromFile implements ExtractorFromFile {
 
     private long methodExecutionTime = 0;
     private final String fileDir;
     private static  final String  SPACE = String.valueOf('\u0020');
 
 
-    public TextExtractorFromFile(String fileDir) {
+    public WordsExtractorFromFile(String fileDir) {
         this.fileDir = fileDir;
     }
 
@@ -27,7 +27,7 @@ public class TextExtractorFromFile implements ExtractorFromFile {
     }
 
     @Override
-    public StringBuilder extractClearedRawTextAsBuilder() throws IOException {
+    public StringBuilder extractRawWordsBuilder() throws IOException {
         File file = new File(fileDir);
         BufferedReader reader;
 
@@ -47,10 +47,10 @@ public class TextExtractorFromFile implements ExtractorFromFile {
     }
 
     @Override
-    public Set<String> extractAsSet(Set<String> setWithDesiredType) throws IOException {
+    public Set<String> extractSet(Set<String> setWithDesiredType) throws IOException {
         setWithDesiredType.clear();
         
-        String[] words = extractClearedRawTextAsBuilder().toString().split(SPACE);
+        String[] words = extractRawArray();
         for (int i = 0; i < words.length; i++) {
             if (!words[i].isEmpty()) setWithDesiredType.add(words[i].toLowerCase());
         }
@@ -58,9 +58,10 @@ public class TextExtractorFromFile implements ExtractorFromFile {
     }
 
     @Override
-    public String[] extractAsArrayOfUniques(Set<String> setWithDesiredType) throws IOException {
+    public String[] extractArrayOfUniques(Set<String> setWithDesiredType) throws IOException {
         setWithDesiredType.clear();
-        String[] words = extractClearedRawTextAsBuilder().toString().split(SPACE);
+
+        String[] words = extractRawArray();
         int length = 0;
         for (int i = 0; i < words.length; i++) {
             if (!words[i].isEmpty()) setWithDesiredType.add(words[i].toLowerCase());
@@ -71,9 +72,13 @@ public class TextExtractorFromFile implements ExtractorFromFile {
         for (String word: setWithDesiredType){
             uniqueWords[i++] = word;
         }
-
-
         return uniqueWords;
+    }
+
+    @Override
+    public String[] extractRawArray() throws IOException {
+        String[] allWords = extractRawWordsBuilder().toString().replaceAll(" +", " ").split(SPACE);
+        return allWords;
     }
 
 }

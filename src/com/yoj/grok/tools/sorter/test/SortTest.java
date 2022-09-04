@@ -25,16 +25,19 @@ public class SortTest {
     private static String[] unorderedWords;
     private static String[] sortedWords;
 
+    private static ExtractorFromFile extractor;
+
 
     @BeforeAll
     static void arrange() throws IOException {
-        ExtractorFromFile extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
-        orderedWords = extractor.extractAsArrayOfUniques(new TreeSet<>());
-        unorderedWords = extractor.extractAsArrayOfUniques(new HashSet<>());
+        extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
+        orderedWords = extractor.extractArrayOfUniques(new TreeSet<>());
+
     }
 
     @BeforeEach
-    public void act(){
+    public void act() throws IOException {
+        unorderedWords = extractor.extractArrayOfUniques(new HashSet<>());
     }
 
 

@@ -15,9 +15,6 @@ public abstract class SortMethodWithMeasurePrototype implements SortMethod {
         startTime = new Date().getTime();
         operations = 0;
 
-        String minWord = null;
-        int minIndex = 0;
-
         String[] sortedWords = sort(unsortedWords);
 
         printTotalOperations();
@@ -28,12 +25,12 @@ public abstract class SortMethodWithMeasurePrototype implements SortMethod {
 
 
 
-    private static void printTotalOperations(){
-        System.out.println("Selection total operations: " + operations);
+    private void printTotalOperations(){
+        System.out.println(this.getClass().getSimpleName() +" total operations: " + operations);
     }
 
-    private static void printWorkingTime(){
+    private void printWorkingTime(){
         workingTime = new Date().getTime() - startTime;
-        System.out.println("Selection total working time: " + workingTime + " ms");
+        System.out.println(this.getClass().getSimpleName() + "Selection total working time: " + workingTime + " ms");
     }
 }

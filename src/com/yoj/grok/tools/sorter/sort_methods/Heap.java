@@ -29,7 +29,7 @@ public class Heap extends SortMethodWithMeasurePrototype{
     }
 
     public void heapify(String[] pool, int heapLength, int node){
-
+        operations++;
         int largest = node;
         int right = node * 2 + 1;
         int left = node * 2 + 2;
@@ -42,7 +42,7 @@ public class Heap extends SortMethodWithMeasurePrototype{
             largest = right;
         }
         if (largest != node) {
-            operations++;
+
             String buffer = pool[node];
             pool[node] = pool[largest];
             pool[largest] = buffer;

@@ -25,7 +25,7 @@ public class BinarySandboxTest {
     @BeforeAll
     public static void arrange() throws IOException {
         ExtractorFromFile extractor = TextExtractorFromFileProxy.getProxy("src\\com\\yoj\\grok\\ulysses\\ulysses.txt");
-        words = extractor.extractAsArrayOfUniques(new TreeSet<>());
+        words = extractor.extractArrayOfUniques(new TreeSet<>());
          lastElem = words.length - 1;
 
 

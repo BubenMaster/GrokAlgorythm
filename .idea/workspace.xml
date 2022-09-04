@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="Add heap Method">
+    <list default="true" id="44baf8a6-45e6-4017-bffe-319335b5ff8c" name="Changes" comment="try on new book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Bubble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Bubble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Insertion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/Insertion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/a/main_sandbox/Sandbox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/a/main_sandbox/Sandbox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/searchers/test/BinarySandboxTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/searchers/test/BinarySandboxTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/test/SortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/sorter/test/SortTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/ExtractorFromFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/ExtractorFromFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/Proxy/TextExtractorFromFileProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/Proxy/TextExtractorFromFileProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/ulysses/ulysses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GrokAlgorythm/com/yoj/grok/ulysses/ulysses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/a/main_sandbox/Sandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinarySandboxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/searchers/test/BinarySandboxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Heap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/Heap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/sort_methods/SortMethodWithMeasurePrototype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/test/SortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/sorter/test/SortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/ExtractorFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/ExtractorFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/Proxy/TextExtractorFromFileProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/Proxy/TextExtractorFromFileProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/TextExtractorFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/yoj/grok/tools/text_extractor/WordsExtractorFromFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +67,7 @@
       <recent name="com.yoj.grok.tools.sorters.select_sort.test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SortTest.testHeap">
+  <component name="RunManager" selected="Application.Sandbox">
     <configuration name="Sandbox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.yoj.grok.a.main_sandbox.Sandbox" />
       <module name="GrokAlgorythm" />
@@ -133,9 +145,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SortTest.testHeap" />
         <item itemvalue="Application.Sandbox" />
         <item itemvalue="JUnit.SortTest" />
+        <item itemvalue="JUnit.SortTest.testHeap" />
         <item itemvalue="JUnit.SortTest.testSort" />
         <item itemvalue="JUnit.SorterByInsertionTest" />
       </list>
@@ -154,7 +166,7 @@
       <workItem from="1661969209174" duration="5866000" />
       <workItem from="1662028932190" duration="15151000" />
       <workItem from="1662112661459" duration="123000" />
-      <workItem from="1662282990677" duration="9749000" />
+      <workItem from="1662282990677" duration="12410000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (Subject arrays can be created)">
       <created>1661856452910</created>
@@ -205,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662293058401</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="try on new book">
+      <created>1662293895207</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662293895207</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +250,7 @@
     <MESSAGE value="Add preparation for mutual realisation for sort methods." />
     <MESSAGE value="Unite sortMethod under one Sort Class" />
     <MESSAGE value="Add heap Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add heap Method" />
+    <MESSAGE value="try on new book" />
+    <option name="LAST_COMMIT_MESSAGE" value="try on new book" />
   </component>
 </project>

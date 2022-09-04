@@ -8,7 +8,8 @@ public interface ExtractorFromFile {
     void setMethodExecutionTime(long timeRecord);
 
 
-    StringBuilder extractClearedRawTextAsBuilder() throws IOException;
-    Set<String> extractAsSet(Set<String> setWithDesiredType) throws IOException;
-    String[] extractAsArrayOfUniques(Set<String> setWithDesiredType) throws IOException;
+    StringBuilder extractRawWordsBuilder() throws IOException;
+    Set<String> extractSet(Set<String> setWithDesiredType) throws IOException;
+    String[] extractArrayOfUniques(Set<String> setWithDesiredType) throws IOException;
+    String[] extractRawArray() throws IOException;
 }
